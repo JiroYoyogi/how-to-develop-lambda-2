@@ -77,7 +77,7 @@ https://abcdefg.execute-api.ap-northeast-1.amazonaws.com/trends
 2026年5月30日の5時時点のトレンドを取得したい場合
 
 ```
-/trends/2026-05-30-0500
+https://abcdefg.execute-api.ap-northeast-1.amazonaws.com/trends/2026-05-30-0500
 ```
 
 ## APIから渡ってくるイベント（ペイロード）
