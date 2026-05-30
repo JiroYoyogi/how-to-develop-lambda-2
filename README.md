@@ -20,7 +20,19 @@ aws s3 ls
 
 # 前回のあらすじ
 
+概要：
+
 関数URLにリクエストするとQiitaのトレンドを取得。欲しい情報のみ抽出したJSONをユーザーに返却。また、S3にJSONを保存する
+
+Lambda：
+
+- 関数名：`get-qiita-trends`
+- ランタイム：`Node.js24.x`
+- 「設定」→「アクセス権限」→「ロール名」→「AmazonS3FullAccess」許可を追加
+
+S3：
+
+- バケット名：`qiita-trends-{名前とか}`
 
 ## 補足
 
