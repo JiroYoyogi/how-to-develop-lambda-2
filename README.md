@@ -249,9 +249,11 @@ https://abcdefg.execute-api.ap-northeast-1.amazonaws.com/trends/2099-12-31-1700
 
 [こちらのリポジトリ](https://github.com/JiroYoyogi/how-to-develop-lambda-2-likes)よりコードをDL
 
-## eventの中身を確認 & 実装の方針
+## eventの中身を確認
 
-GETとPOSTの関数を分けて作るとハンズオン上では手間なので、1つの関数を共有。if文でGETとPOSTの処理を分ける
+```
+npm run dev
+```
 
 ## 「いいね」をPOST
 
@@ -280,12 +282,9 @@ const headers = {
 
 export const handler = async (event) => {
   try {
-    // HTTP API => event.requestContext?.http?.method
-    // REST API => event.httpMethod
-    const httpMethod = event.requestContext?.http?.method ?? event.httpMethod;
     const articleId = event.pathParameters?.articleId;
 
-    console.log(httpMethod, articleId);
+    console.log(articleId);
     
     if (!articleId) {
       throw new Error("articleId is required");
@@ -348,11 +347,14 @@ export const handler = async (event) => {
 
 ## 「いいね」をGET
 
+GETとPOSTの関数を分けて作るとハンズオン上では手間なので、1つの関数を共有。if文でGETとPOSTの処理を分ける
+
 ### コードを変更
 
 差分：
 
 - QueryCommandの読み込み
+- `httpMethod`を`event`から取得
 - `if (httpMethod === "GET")`の処理追加
 
 ```js
