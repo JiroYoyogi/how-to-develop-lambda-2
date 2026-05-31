@@ -114,7 +114,7 @@ const event = {
   body: "Hello from Lambda",
   // /trends/{datetime}
   pathParameters: {
-    datetime: '2099-12-31-0500'
+    datetime: '2099-12-31-1700'
   },
 };
 ```
@@ -247,7 +247,7 @@ https://abcdefg.execute-api.ap-northeast-1.amazonaws.com/trends/2099-12-31-1700
 
 ## コードをDL
 
-[こちらのリポジトリ](https://abcdefg.execute-api.ap-northeast-1.amazonaws.com/trends/2099-12-31-1700)よりコードをDL
+[こちらのリポジトリ](https://github.com/JiroYoyogi/how-to-develop-lambda-2-likes)よりコードをDL
 
 ## eventの中身を確認 & 実装の方針
 
