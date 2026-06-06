@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { XMLParser } from 'fast-xml-parser';
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
-const s3 = new S3Client();
+const s3 = new S3Client({
+  region: 'ap-northeast-1',
+});
 
 const BUCKET_NAME = '';
 
